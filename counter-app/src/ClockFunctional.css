@@ -1,0 +1,22 @@
+.clock{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.clock h4{
+    margin: 5px;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.clock h4 span{
+    font-weight: bold;
+    color: crimson;
+}
+
+.clock h4 span:hover{
+    text-decoration: underline;
+    color: rgb(119, 48, 62);
+    cursor: pointer;
+}
