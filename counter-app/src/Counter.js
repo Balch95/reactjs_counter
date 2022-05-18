@@ -31,15 +31,12 @@ class Counter extends Component {
 
             if(action === 'add'){
                 currentCounterValue += currentStep;
-                currentStep = 0;
             }else if(action === 'reset'){
-                currentCounterValue = 0;
-                
+                currentCounterValue = 0;  
             }
 
             return({
                 counterValue: currentCounterValue
-                
             });
         });
     };
@@ -53,8 +50,8 @@ class Counter extends Component {
     };
 
     changeStep = (estep) =>{
-        console.log(estep.value)
-        this.setState({stepValue: estep.value})
+        console.log(estep)
+        this.setState({stepValue: estep})
     };
 
 
