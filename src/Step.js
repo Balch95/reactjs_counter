@@ -1,34 +1,25 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 
 
 class Step extends Component{
 
-    constructor(props){
-        super(props);
-        this.state ={
-            steps: this.props.stepMethod
-        };
-    }
+
+    updateStep = () => { 
+        this.props.stepMethod( parseInt(this._step.value));
+    };
 
 
-    
-    
-    
+
     render(){
-        let st = this;
-        let ste = this.props.steps;
 
-        ste = st;
-        
         return( 
-        
         <div className="steps">
              Krok: 
-            <input ref={(data) => { st._input = data}} min="1" type='number'/>
+            <input  min={1}  ref={(data) => {this._step = data}}  onChange={this.updateStep}  type='number'/>
         </div>)
     }
-}
 
+}
 
 
 export default Step;

@@ -12,8 +12,8 @@ class Counter extends Component {
         super(props);
 
         this.state={
-            counterValue: this.props.initValue,
-            stepValue: this.props.initSteps,
+            counterValue: 0,
+            stepValue: 0,
             showClock: true,
         };
 
@@ -32,12 +32,11 @@ class Counter extends Component {
             if(action === 'add'){
                 currentCounterValue += currentStep;
             }else if(action === 'reset'){
-                currentCounterValue = 0;
+                currentCounterValue = 0;  
             }
 
             return({
                 counterValue: currentCounterValue
-                
             });
         });
     };
@@ -50,8 +49,9 @@ class Counter extends Component {
         })
     };
 
-    changeStep = (value) =>{
-        this.setState({stepValue: value})
+    changeStep = (estep) =>{
+        console.log(estep)
+        this.setState({stepValue: estep})
     };
 
 
